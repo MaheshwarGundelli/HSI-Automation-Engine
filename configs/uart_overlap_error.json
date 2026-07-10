@@ -1,0 +1,30 @@
+{
+  "peripheral_name": "UART0",
+  "base_address": "0x40011000",
+  "register_width": 32,
+  "registers": [
+    {
+      "name": "CTRL",
+      "offset": "0x00",
+      "access": "RW",
+      "bit_fields": [
+        {"name": "ENABLE", "bit_start": 0, "bit_width": 1},
+        {"name": "PARITY", "bit_start": 1, "bit_width": 2}
+      ]
+    },
+    {
+      "name": "STATUS",
+      "offset": "0x02",
+      "access": "RO",
+      "bit_fields": [
+        {"name": "TX_EMPTY", "bit_start": 0, "bit_width": 1}
+      ]
+    },
+    {
+      "name": "DATA",
+      "offset": "0x08",
+      "access": "RW",
+      "bit_fields": []
+    }
+  ]
+}
